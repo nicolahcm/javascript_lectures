@@ -1,5 +1,8 @@
 
 
+0. 
+https://www.youtube.com/watch?v=XiQ9rjaa2Ow
+
 1. Javascript:
 
 Переменные и их значение.
@@ -30,6 +33,14 @@ git commit -m "ваше сообшение"
 
 git log 
 
+
+6. Что скачать 
+
+Git, Git Bash
+
+Visual Studio Code
+
+Node (versione >= 20)
 
 
 
