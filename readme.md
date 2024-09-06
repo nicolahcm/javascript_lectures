@@ -23,7 +23,13 @@ https://learn.javascript.ru/operators
 5. GIT:
 
 git init 
+
 git add .
+
 git commit -m "ваше сообшение"
+
+git log 
+
+
 
 
