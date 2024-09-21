@@ -20,3 +20,13 @@ let yearOfBirth = [2001, 2002, 1999, 2000]
 // SOL: // решайте 
 
 
+// Ex. 3 
+let sidesLength = [10, 20, 30, 5, 2]
+
+// Get the area of such squares, knowing that the side length is the one listed above. Expected result: [100,400,900,25,4]
+
+// SOL: 
+
+// The solution requires the usage of map method.
+
+
