@@ -1,3 +1,12 @@
+// BEFORE STUDYING THE FOLLOWING:
+// Given the list 
+
+let numbers = [10,9,7]
+// Try to get the list [10+3, 9+3, 7+3]
+
+
+
+
 
 
 // HIGH ORDER FUNCTIONS
