@@ -30,3 +30,13 @@ let sidesLength = [10, 20, 30, 5, 2]
 // The solution requires the usage of map method.
 
 
+// ---->
+// React: 
+
+let texts = ["button1", "button2", "button3"] // 
+// I want to get as results <div> <button> button1 </button> </div>, 
+// for each element in texts: 
+
+// SOLUTION:
+texts.map(el => "<div> <button>" + el + "</button> </div>")
+
