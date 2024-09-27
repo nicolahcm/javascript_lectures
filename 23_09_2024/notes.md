@@ -36,7 +36,54 @@ export function App(props) {
 Задача: делайте то же самое, но с какими то картами как Avito, Ozon, etc.. 
 
 
+## 2. Conditional Rendering / Условная рендеринг
 
+`
+import React from 'react';
+import { useState } from 'react';
+
+const Cross = function (props) {
+  return <div>
+    This is a cross... Personalize your component CROSS X
+  </div>
+}
+
+const Head = function (props) {
+  return <div>
+    This is a Head... Personalize your component HEAD O
+  </div>
+}
+
+export default function App(props) {
+  let [crossOrHead, setCrossOrHead] = useState('X');
+
+  let onButtonClicked = function (event) {
+    if (crossOrHead === "X") {
+      setCrossOrHead('O');
+    } else {
+      setCrossOrHead("X")
+    }
+  };
+
+  if (crossOrHead === "O") {
+    return (
+      <div className='App'>
+        HELLO WORLD
+        <Head />
+        <button onClick={onButtonClicked}>Cross Or Head?</button>
+      </div>
+    );
+  } else {
+    return <div className='App'>
+      HELLO FUNCTION
+      <Cross />
+      <button onClick={onButtonClicked}>Cross Or Head?</button>
+    </div>
+  }
+}
+`
+
+Based on a state, we can decide what to render. We can render 1 child component or another, for example.
 
 Resources:
 
