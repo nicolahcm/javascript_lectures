@@ -38,7 +38,7 @@ export function App(props) {
 
 ## 2. Conditional Rendering / Условная рендеринг
 
-`
+```
 import React from 'react';
 import { useState } from 'react';
 
@@ -81,7 +81,7 @@ export default function App(props) {
     </div>
   }
 }
-`
+```
 
 Based on a state, we can decide what to render. We can render 1 child component or another, for example.
 
