@@ -85,6 +85,8 @@ export default function App(props) {
 
 Based on a state, we can decide what to render. We can render 1 child component or another, for example.
 
+Exercise: With the help of conditional rendering, do 2 categories of product (kitchen products and food products). When we press one button we have one category of product and some of such products. When we press the other button, we get the other products.
+
 Resources:
 
 1. https://playcode.io/react 
