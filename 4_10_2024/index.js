@@ -20,14 +20,25 @@ let cards = [
 function displayCards(cards) {
     let container = document.getElementById("container");
 
+    let innerString = "";
     for (let card of cards) {
-        container.innerHTML += `<div class='card'> 
+        innerString += `<div class='card'> 
         ${card.name} <h4>Price: 
         ${card.price} </h4> 
         <img class='img' src='${card.imgUrl}'>
         </div>`
     }
+
+    container.innerHTML = innerString;
 }
 
 
 displayCards(cards);
+
+
+function searchByTitle() {
+    let textToSearch = document.getElementById("search_field").value;
+
+    console.log(`text to search: ${textToSearch}`)
+    // Do Something! 
+}
