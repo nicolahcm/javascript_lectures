@@ -1,0 +1,16 @@
+.img {
+    width: 100px;
+    height: 100px;
+}
+
+.card {
+    border: solid 1px;
+    width: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
