@@ -41,4 +41,7 @@ function searchByTitle() {
 
     console.log(`text to search: ${textToSearch}`)
     // Do Something! 
+
+    let cardsFiltered = cards.filter(card => card.name.startsWith(textToSearch))
+    displayCards(cardsFiltered)
 }
