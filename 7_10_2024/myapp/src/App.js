@@ -1,7 +1,7 @@
 import './App.css';
+import { useState } from 'react';
 
 function Card(props) {
-
   return <div className='card'>
     {props.name} <h4>Price:
       {props.price} </h4>
@@ -9,12 +9,8 @@ function Card(props) {
   </div>
 }
 
-function Description(props) {
-  return <div> This is a Description </div>
-}
-
 function App() {
-  let cards = [
+  let cardsA = [
     {
       "name": "flower",
       "price": 500,
@@ -24,7 +20,10 @@ function App() {
       "name": "computer",
       "price": 5000,
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Desktop_computer_clipart_-_Yellow_theme.svg/640px-Desktop_computer_clipart_-_Yellow_theme.svg.png"
-    },
+    }
+  ]
+
+  let cardsB = [
     {
       "name": "duck",
       "price": 2000,
@@ -32,14 +31,18 @@ function App() {
     }
   ]
 
+  let [displayedCards, setDisplayedCards] = useState(cardsA)
 
   return (
     <div className="App">
       <div id="container">
-        {cards.map((card, i) => <Card name={card.name} price={card.price} imgUrl={card.imgUrl} key={i} />)}
+        {displayedCards.map((card, i) => <Card name={card.name} price={card.price} imgUrl={card.imgUrl} key={i} />)}
       </div>
 
-      <Description />
+      <div>
+        <button onClick={() => setDisplayedCards(cardsA)}>CATEGORY A</button>
+        <button onClick={() => setDisplayedCards(cardsB)}>CATEGORY B</button>
+      </div>
     </div>
   );
 }
