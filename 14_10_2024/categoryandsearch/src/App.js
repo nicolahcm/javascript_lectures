@@ -12,15 +12,16 @@ function Card(props) {
 
 function App() {
 
-  let cardsA = [
+
+  let [cardsA, setCardsA] = useState([
     {
       "name": "flower",
       "price": 500,
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZly4t3rdIz5XDJa4QIVwkNjkIEU3bRJVYbQ&s"
     }
-  ]
+  ])
 
-  let cardsB = [
+  let [cardsB, setCardsB] = useState([
     {
       "name": "computer",
       "price": 5000,
@@ -31,10 +32,10 @@ function App() {
       "price": 2000,
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/800px-Anas_platyrhynchos_male_female_quadrat.jpg"
     }
-  ]
+  ])
 
   let [cardsDisplayed, setCardsDisplayed] = useState(cardsB)
-  let [cardsChoosed, setCardsChoosed] = useState(cardsB)
+  let [chosenCategory, setChosenCategory] = useState("B")
   let [inputValue, setInputValue] = useState('');
 
   const handleChange = (event) => {
@@ -42,13 +43,16 @@ function App() {
     console.log(valueInserted)
     setInputValue(valueInserted);
 
-    let filteredCards = cardsChoosed.filter(card => card.name.startsWith(valueInserted))
+    let chosenCards = chosenCategory == "A" ? cardsA : cardsB
+
+    let filteredCards = chosenCards.filter(card => card.name.startsWith(valueInserted))
     setCardsDisplayed(filteredCards)
   };
 
-  function changeCategory(cardsToShow) {
-    setCardsChoosed(cardsToShow)
-    setCardsDisplayed(cardsToShow)
+  function changeCategory(letter) {
+    setChosenCategory(letter)
+    let chosenCards = chosenCategory == "A" ? cardsA : cardsB;
+    setCardsDisplayed(chosenCards)
   }
 
 
@@ -61,8 +65,8 @@ function App() {
       </div>
 
       <div className="categoryToSearch">
-        <button onClick={() => changeCategory(cardsA)}>Category A</button>
-        <button onClick={() => changeCategory(cardsB)}>Category B</button>
+        <button onClick={() => changeCategory("A")}>Category A</button>
+        <button onClick={() => changeCategory("B")}>Category B</button>
       </div>
 
       <div className="search">
