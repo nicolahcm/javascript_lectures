@@ -48,6 +48,7 @@ function App() {
   const [bodyCard, setBodyCard] = useState("")
   const [cardOrEditForm, setCardOrEditForm] = useState("C")
 
+  setBodyCard("jjj")
 
   const changeView = (e) => {
     e.preventDefault()
